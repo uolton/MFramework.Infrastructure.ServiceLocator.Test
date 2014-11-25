@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83B19B1B-88BA-4F41-8FDD-211D26DCEA8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MFramework.Infrastructure.ServiceLocator.Test</RootNamespace>
+    <AssemblyName>MFramework.Infrastructure.ServiceLocator.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Siege.Requisitions.UnitTests/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\..\packages\Castle.Core.3.3.0\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Facilities.FactorySupport">
+      <HintPath>..\..\..\packages\Castle.FactorySupportFacility.3.2.0\lib\net40\Castle.Facilities.FactorySupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\..\packages\Castle.Windsor.3.2.0\lib\net40\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\MFramework.Common.Proxy\dependencies\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>..\..\..\packages\NUnit.Mocks.2.6.3\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>..\..\..\packages\pNUnit.2.6.3\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationRuleTests.cs" />
+    <Compile Include="AOP\Counter.cs" />
+    <Compile Include="AOP\SampleEncapsulatingAttribute.cs" />
+    <Compile Include="AOP\SamplePostProcessingAttribute.cs" />
+    <Compile Include="AOP\SamplePreProcessingAttribute.cs" />
+    <Compile Include="AOP\TestType.cs" />
+    <Compile Include="AOP\TestType2.cs" />
+    <Compile Include="AOP\TypeGeneratorTests.cs" />
+    <Compile Include="AutoMockingTests.cs" />
+    <Compile Include="AutoRegistrationTests.cs" />
+    <Compile Include="BenchmarkTests.cs" />
+    <Compile Include="ConstructorArgumentTests.cs" />
+    <Compile Include="ContextAwarenessTests.cs" />
+    <Compile Include="ContextualTests\BaseContextTests.cs" />
+    <Compile Include="ContextualTests\Classes\DefaultTestRepository.cs" />
+    <Compile Include="ContextualTests\Classes\DefaultTestService.cs" />
+    <Compile Include="ContextualTests\Classes\IBaseService.cs" />
+    <Compile Include="ContextualTests\Classes\IRepositoryCondition.cs" />
+    <Compile Include="ContextualTests\Classes\ITestCondition.cs" />
+    <Compile Include="ContextualTests\Classes\ITestController.cs" />
+    <Compile Include="ContextualTests\Classes\ITestRepository.cs" />
+    <Compile Include="ContextualTests\Classes\RepositoryCondition.cs" />
+    <Compile Include="ContextualTests\Classes\TestCondition.cs" />
+    <Compile Include="ContextualTests\Classes\TestController.cs" />
+    <Compile Include="ContextualTests\Classes\TestRepository1.cs" />
+    <Compile Include="ContextualTests\Classes\TestRepository2.cs" />
+    <Compile Include="ContextualTests\Classes\TestService1.cs" />
+    <Compile Include="ContextualTests\Classes\TestService2.cs" />
+    <Compile Include="ContextualTests\WindsorContextTests.cs" />
+    <Compile Include="DecoratorTests.cs" />
+    <Compile Include="ExecutionStoreTests.cs" />
+    <Compile Include="FactoryTests.cs" />
+    <Compile Include="InitializationTests.cs" />
+    <Compile Include="InjectorTests.cs" />
+    <Compile Include="LazyInjectionTests.cs" />
+    <Compile Include="MultiConditionalActivationTests.cs" />
+    <Compile Include="MultiRegistrationTests.cs" />
+    <Compile Include="OpenGenericTests.cs" />
+    <Compile Include="PartiallyClosedGenericsTests.cs" />
+    <Compile Include="PerResolutionContextTests.cs" />
+    <Compile Include="PolicyTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationExtensions\Classes\Coffee.cs" />
+    <Compile Include="RegistrationExtensions\Classes\EspressoDecorator.cs" />
+    <Compile Include="RegistrationExtensions\Classes\IngredientDecorator.cs" />
+    <Compile Include="RegistrationExtensions\Classes\Ingredients.cs" />
+    <Compile Include="RegistrationExtensions\Classes\WhippedCreamDecorator.cs" />
+    <Compile Include="RegistrationTests.cs" />
+    <Compile Include="ServiceLocatorTests.cs" />
+    <Compile Include="TestClasses\AlternateConstructorArgument.cs" />
+    <Compile Include="TestClasses\ConstructorArgument.cs" />
+    <Compile Include="TestClasses\DependsOnAlternateConstructorImplicitly.cs" />
+    <Compile Include="TestClasses\DependsOnInterface.cs" />
+    <Compile Include="TestClasses\DependsOnIServiceLocator.cs" />
+    <Compile Include="TestClasses\DependsOnMultipleInterface.cs" />
+    <Compile Include="TestClasses\IConstructorArgument.cs" />
+    <Compile Include="TestClasses\ITestInterface.cs" />
+    <Compile Include="TestClasses\IUnregisteredInterface.cs" />
+    <Compile Include="TestClasses\MultiConstructorType.cs" />
+    <Compile Include="TestClasses\SpecialTestCase.cs" />
+    <Compile Include="TestClasses\TestCase1.cs" />
+    <Compile Include="TestClasses\TestCase2.cs" />
+    <Compile Include="TestClasses\TestCase4.cs" />
+    <Compile Include="TestClasses\TestClassWithClassDependencies.cs" />
+    <Compile Include="TestClasses\TestClassWithInterfaceDependencies.cs" />
+    <Compile Include="TestClasses\TestContext.cs" />
+    <Compile Include="TestClasses\TestDecorator.cs" />
+    <Compile Include="TestClasses\TestEnum.cs" />
+    <Compile Include="TestClasses\TestEvaluation.cs" />
+    <Compile Include="TestClasses\TestInterfaceWithMethods.cs" />
+    <Compile Include="TestClasses\TestStruct.cs" />
+    <Compile Include="TestClasses\UnregisteredClass.cs" />
+    <Compile Include="Adapters\WindsorAdapterTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Fakes Include="Fakes\Siege.Proxy.fakes" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MFramework.Common.Proxy\MFramework.Common.Proxy.csproj">
+      <Project>{2edf2e1d-c65c-4246-99a8-217b7cb38810}</Project>
+      <Name>MFramework.Common.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFramework.Infrastructure.ServiceLocator.AutoMocker\MFramework.Infrastructure.ServiceLocator.AutoMocker.csproj">
+      <Project>{a9f60065-137a-40d3-a266-51e79792bab8}</Project>
+      <Name>MFramework.Infrastructure.ServiceLocator.AutoMocker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFramework.Infrastructure.ServiceLocator.Native\MFramework.Infrastructure.ServiceLocator.Native.csproj">
+      <Project>{95e2262b-e46c-4b10-9a28-12fc2c7127f0}</Project>
+      <Name>MFramework.Infrastructure.ServiceLocator.Native</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFramework.Infrastructure.ServiceLocator.WindsorAdapter\MFramework.Infrastructure.ServiceLocator.WindsorAdapter.csproj">
+      <Project>{20ae3922-30f4-47c5-a86b-c27e320bde65}</Project>
+      <Name>MFramework.Infrastructure.ServiceLocator.WindsorAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MFramework.Infrastructure.ServiceLocator\MFramework.Infrastructure.ServiceLocator.csproj">
+      <Project>{a454551d-78aa-4bca-be97-5eba0c2deb56}</Project>
+      <Name>MFramework.Infrastructure.ServiceLocator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Installers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
